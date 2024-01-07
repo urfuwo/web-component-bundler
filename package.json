@@ -1,0 +1,38 @@
+{
+  "name": "experimental-web-components-bundler",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Experimental dynamic bundling of Web Components code",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "nodemon start-local-server.js",
+    "deploy": "serverless deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-virtual": "^3.0.2",
+    "@rollup/wasm-node": "^4.9.1",
+    "@ui5/webcomponents": "^1.20.1",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "file-system-cache": "^2.4.4",
+    "serverless-http": "^3.2.0",
+    "tmp": "^0.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "overrides": {
+    "@rollup/plugin-node-resolve": {
+      "rollup": "@rollup/wasm-node"
+    },
+    "@rollup/plugin-virtual": {
+      "rollup": "@rollup/wasm-node"
+    }
+  }
+}
