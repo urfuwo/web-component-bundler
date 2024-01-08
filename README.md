@@ -1,3 +1,5 @@
+from: https://github.com/adobe/web-platform-zoo/tree/main/experiments/web-components-bundler 
+
 Experimental dynamic bundling of Web Components code
 ----
 
